@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Board Dashboard</title>
+</head>
+<body>
+    <div class="username">
+        <%= username %>
+    </div>
+    <div class="login-container">
+        <img src="electricity_board_logo.png" alt="Electricity Board Logo">
+        <h1>Customer Login</h1>
+        <form action="/user/update-username" method="post">
+            <label for="username">Email:</label>
+            <input type="text" id="username" name="username" required>
+            <input type="hidden" id="id" name="id" value=<%= id %>>
+
+            <button type="submit">Update</button>
+        </form>
+    </div>
+    <% if (message) { %>
+        <h4><%= message %></h4>
+    <% } %>
+</body>
+</html>

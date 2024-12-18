@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Board Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <img src="electricity_board_logo.png" alt="Electricity Board Logo">
+        <h1>Customer Login</h1>
+        <form action="/user/login" method="post">
+            <label for="username">Email:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+            <a href="/user/register">Register</a>
+        </form>
+    </div>
+    <% if (message) { %>
+        <h4><%= message %></h4>
+    <% } %>
+</body>
+</html>
